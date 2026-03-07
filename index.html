@@ -48,12 +48,11 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.3rem;
-      color: var(--black);
       text-decoration: none;
-      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
     }
+    .nav-logo svg { height: 32px; width: auto; }
     .nav-logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-link {
@@ -87,6 +86,82 @@
       margin: 0 auto;
       position: relative;
     }
+    .hero-left { display: flex; flex-direction: column; }
+    .hero-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 16px;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+    .hero-visual-inner {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      padding: 1.75rem;
+      gap: 0;
+    }
+    .hv-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.72rem;
+      animation: slideIn 0.4s ease both;
+    }
+    .hv-bar:nth-child(1) { animation-delay: 0.4s; }
+    .hv-bar:nth-child(2) { animation-delay: 0.6s; }
+    .hv-bar:nth-child(3) { animation-delay: 0.8s; }
+    .hv-bar:nth-child(4) { animation-delay: 1.0s; }
+    .hv-bar:nth-child(5) { animation-delay: 1.2s; }
+    .hv-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .hv-dot.green { background: #28c840; }
+    .hv-dot.yellow { background: #febc2e; }
+    .hv-dot.blue { background: #4a90d9; }
+    .hv-label { color: var(--mid); flex: 1; }
+    .hv-val { color: var(--black); font-weight: 500; }
+    .hv-val.good { color: var(--accent); }
+    .hv-val.warn { color: #d4860a; }
+    .hv-footer {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hv-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .hv-status::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    .hv-time { font-family: 'Geist Mono', monospace; font-size: 0.68rem; color: var(--light); }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
     .hero-badge {
       display: inline-flex;
@@ -175,8 +250,8 @@
     .hero-stats {
       display: flex;
       gap: 3rem;
-      margin-top: 5rem;
-      padding-top: 3rem;
+      margin-top: 3rem;
+      padding-top: 2.5rem;
       border-top: 1px solid var(--border);
       flex-wrap: wrap;
       animation: fadeUp 0.5s ease 0.3s both;
@@ -466,7 +541,17 @@
       nav { padding: 0 1.5rem; }
       .nav-links .nav-link { display: none; }
       .hero, .section, .section-full { padding: 5rem 1.5rem; }
-      .hero { padding-top: 6rem; }
+      .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 3rem 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+      .hero-right { display: none; }
       .problem-grid, .about-grid, .intake-inner { grid-template-columns: 1fr; gap: 3rem; }
       .services-grid, .roles-grid, .security-grid { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr 1fr; }
@@ -480,7 +565,22 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">B<span>13</span> Solutions</a>
+  <a href="#" class="nav-logo"><svg viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="34" height="6" rx="1.5" fill="#0f0f0e"/>
+      <rect x="2" y="19" width="34" height="6" rx="1.5" fill="#0f0f0e"/>
+      <rect x="2" y="36" width="34" height="6" rx="1.5" fill="#0f0f0e"/>
+      <rect x="2" y="2" width="6" height="40" rx="1.5" fill="#0f0f0e"/>
+      <rect x="30" y="2" width="6" height="20" rx="1.5" fill="#0f0f0e"/>
+      <rect x="30" y="22" width="6" height="20" rx="1.5" fill="#0f0f0e"/>
+      <rect x="43" y="2" width="1.5" height="40" rx="0.75" fill="#e5e4e0"/>
+      <rect x="50" y="2" width="34" height="6" rx="1.5" fill="#1a6b3c"/>
+      <rect x="50" y="19" width="34" height="6" rx="1.5" fill="#1a6b3c"/>
+      <rect x="50" y="36" width="34" height="6" rx="1.5" fill="#1a6b3c"/>
+      <rect x="78" y="2" width="6" height="40" rx="1.5" fill="#1a6b3c"/>
+      <rect x="50" y="2" width="6" height="20" rx="1.5" fill="#1a6b3c"/>
+      <rect x="50" y="22" width="6" height="20" rx="1.5" fill="#1a6b3c"/>
+      <text x="92" y="29" font-family="Geist,sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="#6b6b67">SOLUTIONS</text>
+    </svg></a>
   <div class="nav-links">
     <a href="#services" class="nav-link">Services</a>
     <a href="#how" class="nav-link">How it works</a>
@@ -500,10 +600,8 @@
     <a href="#services" class="btn-secondary">View services →</a>
   </div>
   <div class="hero-stats">
-    <div><div class="stat-num">48h</div><div class="stat-label">From broken to production</div></div>
-    <div><div class="stat-num">$0</div><div class="stat-label">No sales calls, ever</div></div>
-    <div><div class="stat-num">24/7</div><div class="stat-label">Always running</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-label">No meetings required</div></div>
+    <div><div class="stat-num">48h</div><div class="stat-label">Full setup to production</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">Works for you non-stop</div></div>
   </div>
 </div>
 </div>
@@ -772,7 +870,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">B<span>13</span> Solutions</div>
+  <div class="footer-logo"><svg viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="34" height="6" rx="1.5" fill="#ffffff"/><rect x="2" y="19" width="34" height="6" rx="1.5" fill="#ffffff"/><rect x="2" y="36" width="34" height="6" rx="1.5" fill="#ffffff"/><rect x="2" y="2" width="6" height="40" rx="1.5" fill="#ffffff"/><rect x="30" y="2" width="6" height="20" rx="1.5" fill="#ffffff"/><rect x="30" y="22" width="6" height="20" rx="1.5" fill="#ffffff"/><rect x="43" y="2" width="1.5" height="40" rx="0.75" fill="rgba(255,255,255,0.2)"/><rect x="50" y="2" width="34" height="6" rx="1.5" fill="#4ade80"/><rect x="50" y="19" width="34" height="6" rx="1.5" fill="#4ade80"/><rect x="50" y="36" width="34" height="6" rx="1.5" fill="#4ade80"/><rect x="78" y="2" width="6" height="40" rx="1.5" fill="#4ade80"/><rect x="50" y="2" width="6" height="20" rx="1.5" fill="#4ade80"/><rect x="50" y="22" width="6" height="20" rx="1.5" fill="#4ade80"/><text x="92" y="29" font-family="Geist,sans-serif" font-size="11" font-weight="500" letter-spacing="2.5" fill="rgba(255,255,255,0.4)">SOLUTIONS</text></svg></div>
   <div class="footer-copy">© 2026 B13 Solutions. Operated autonomously.</div>
   <a href="mailto:adam@b13solutions.com" class="footer-email">adam@b13solutions.com</a>
 </footer>
