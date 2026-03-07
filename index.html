@@ -655,57 +655,67 @@
 <!-- SERVICES -->
 <div class="services-wrap" id="services">
 <div class="section">
-  <p class="section-label">Services</p>
-  <h2 class="section-title">Three ways to work with us.</h2>
-  <p class="section-sub">Everything is async. Intake form to proposal to Stripe. No calls, no meetings.</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-tag">Start here</div>
-      <div class="service-price">Free</div>
-      <div class="service-period">no commitment</div>
-      <div class="service-name">Free Consult</div>
-      <div class="service-desc">We review your setup, find your biggest problems, and send you a written findings note within 24 hours. No pitch. Pure value.</div>
-      <ul class="service-features">
-        <li>Review your current setup</li>
-        <li>Identify biggest cost drivers</li>
-        <li>Written findings note in 24h</li>
-        <li>Specific, actionable fixes</li>
-        <li>No commitment required</li>
+  <p class="section-label">How It Works</p>
+  <h2 class="section-title">One engagement. Three stages.</h2>
+  <p class="section-sub">It starts with a free consult. If we're a fit, we build your agent and keep it running. Most clients do all three.</p>
+
+  <div style="display:flex;gap:0;margin-top:3.5rem;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--white);">
+
+    <!-- Step connectors -->
+    <div style="flex:1;padding:2rem;border-right:1px solid var(--border);position:relative;">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-family:'Geist Mono',monospace;font-size:0.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div style="font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);font-weight:500;">Start here — Free</div>
+      </div>
+      <div style="font-family:'Instrument Serif',serif;font-size:1.6rem;letter-spacing:-0.02em;color:var(--black);margin-bottom:0.5rem;line-height:1.1;">Free Consult</div>
+      <div style="font-size:0.875rem;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;">We review your setup and send you a written findings note within 24 hours. No pitch, no commitment — just a clear picture of where things stand and what to fix.</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:2rem;">
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Review your current setup</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Identify biggest problems</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Written findings note in 24h</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Specific, actionable fixes</li>
       </ul>
-      <a href="#intake" class="service-cta">Get Free Consult</a>
+      <a href="#intake" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-size:0.875rem;font-weight:600;text-decoration:none;background:var(--off-white);color:var(--black);border:1px solid var(--border);transition:all 0.15s;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background='var(--off-white)'">Start with Free Consult →</a>
     </div>
-    <div class="service-card featured">
-      <div class="service-tag">Most popular</div>
-      <div class="service-price">$1,500</div>
-      <div class="service-period">one-time setup</div>
-      <div class="service-name">Agent Setup & Deployment</div>
-      <div class="service-desc">From broken to production in 48 hours. Full OpenClaw setup, configured and verified on your infrastructure.</div>
-      <ul class="service-features">
-        <li>OpenClaw installation & config</li>
-        <li>Session discipline implementation</li>
-        <li>Three-tier memory architecture</li>
-        <li>Credential vault setup</li>
-        <li>Crons, channels, integrations</li>
-        <li>1 week included support</li>
+
+    <!-- Stage 2 -->
+    <div style="flex:1;padding:2rem;border-right:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-family:'Geist Mono',monospace;font-size:0.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div style="font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);font-weight:500;">Setup — $1,500 one-time</div>
+      </div>
+      <div style="font-family:'Instrument Serif',serif;font-size:1.6rem;letter-spacing:-0.02em;color:var(--black);margin-bottom:0.5rem;line-height:1.1;">Agent Setup & Deployment</div>
+      <div style="font-size:0.875rem;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;">We build and configure your agent end-to-end in 48 hours. You're in production before the week is out, with a week of included support to make sure everything runs right.</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:2rem;">
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Full OpenClaw setup & config</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Three-tier memory architecture</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Session discipline & cost controls</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Channels, crons & integrations</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6gem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>1 week included support</li>
       </ul>
-      <a href="#intake" class="service-cta">Get Setup</a>
+      <a href="#intake" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-size:0.875rem;font-weight:600;text-decoration:none;background:var(--off-white);color:var(--black);border:1px solid var(--border);transition:all 0.15s;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background='var(--off-white)'">Get Your Agent Built →</a>
     </div>
-    <div class="service-card">
-      <div class="service-tag">Ongoing</div>
-      <div class="service-price">$300</div>
-      <div class="service-period">per month</div>
-      <div class="service-name">Ongoing Operations</div>
-      <div class="service-desc">Active maintenance, weekly health reports, and continuous improvement. We don't just keep the lights on — we make it better.</div>
-      <ul class="service-features">
-        <li>Weekly health reports</li>
-        <li>3 config changes/month</li>
-        <li>Bug fixes within 24 hours</li>
-        <li>Monthly strategy note</li>
-        <li>24h async support</li>
+
+    <!-- Stage 3 -->
+    <div style="flex:1;padding:2rem;">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-family:'Geist Mono',monospace;font-size:0.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div style="font-family:'Geist Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);font-weight:500;">Ongoing — $300/month</div>
+      </div>
+      <div style="font-family:'Instrument Serif',serif;font-size:1.6rem;letter-spacing:-0.02em;color:var(--black);margin-bottom:0.5rem;line-height:1.1;">Ongoing Operations</div>
+      <div style="font-size:0.875rem;color:var(--mid);line-height:1.7;margin-bottom:1.5rem;">We keep your agent healthy, improving, and earning its keep every month. Weekly reports, fast bug fixes, and active improvements — not just maintenance.</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:2rem;">
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Weekly health reports</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Bug fixes within 24 hours</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>3 config changes/month</li>
+        <li style="font-size:0.85rem;color:var(--mid);display:flex;gap:0.6rem;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>Monthly strategy note</li>
       </ul>
-      <a href="#intake" class="service-cta">Get Support</a>
+      <a href="#intake" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-size:0.875rem;font-weight:600;text-decoration:none;background:var(--off-white);color:var(--black);border:1px solid var(--border);transition:all 0.15s;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background='var(--off-white)'">Add Ongoing Support →</a>
     </div>
+
   </div>
+
+  <p style="text-align:center;font-size:0.82rem;color:var(--light);margin-top:1.25rem;font-family:'Geist Mono',monospace;">Most clients do all three &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; You own everything</p>
 </div>
 </div>
 
